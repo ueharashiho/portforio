@@ -1,0 +1,320 @@
+body {
+	font-family: 'ヒラギノ角ゴシック', 'Hiragino Sans', 'Avenir', 'Avenir Next Condensed',
+}
+
+header {
+	height: 10px;
+	width: 100%;
+}
+
+.container {
+	font-size: 15px;
+	padding-left: 100px;
+	padding-top: 10px;
+}
+
+.header-left {
+	float: right;
+	font-size: 15px;
+	padding-right: 100px;
+	padding-top: 2px;
+}
+
+main {
+	padding: 300px 0 80px 0;
+}
+
+.top-wrapper h1 {
+	letter-spacing: 5px;
+	text-align: center;
+	margin-bottom: 0;
+}
+
+.top-wrapper h3 {
+	text-align: center;
+	font-size: 15px;
+	margin-top: 0;
+	padding-bottom: 300px;
+}
+
+.lesson-wrapper {
+	padding-top: 100px;
+	padding-bottom: 100px;
+	padding-left: 100px;
+	font-size: 35px;
+	background-color: #f4f4f4;
+}
+
+.my-wrapper {
+	float: right;
+	font-size: 35px;
+	padding-right: 80px;
+}
+
+.my-wrapper a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.lesson-wrapper p {
+	font-size: 20px;
+}
+
+footer {
+	padding-bottom: 50px;
+	padding-left: 100px;
+}
+
+.massage-wrapper {
+	background-image: url(17733.jpg);
+	background-size: 130px auto;
+	background-repeat: no-repeat;
+	padding-left: 140px;
+	padding-bottom: 30px;
+}
+
+.massage-wrapper h3 p {
+	font-size: 15px;
+	transition: 0.5s;
+}
+
+.footer-list {
+	float: right;
+	font-size: 15px;
+	padding-right: 100px;
+}
+
+.footer-list a {
+	color: #000000;
+	text-decoration: none;
+}
+
+.twitter-logo:hover {
+	color: #00ceff;
+	transition: 0.5s;
+}
+
+.facebook-logo:hover {
+	color: #041de2;
+	transition: 0.5s;
+}
+
+a:hover {
+	color: #989898;
+}
+
+/* フォーム */
+
+#contact_form .input_item dl {
+    margin: 0 0 20px 0;
+    width: 820px;
+}
+ 
+#contact_form .input_item dl dt {
+    float: ;
+    width: 250px;
+    font-size: 18px;
+    line-height: 100px;
+    height: 30px;
+    padding: 3px 0 3px 0;
+    text-indent: -48px;
+    margin: 0 0 0 48px;
+}
+ 
+#contact_form .input_item dl dt span {
+    font-size: 14px;
+    margin: 0 10px 0 0;
+    display: inline;
+    line-height: 20px;
+    padding: 3px 10px;
+    color: #ffffff;
+    height: 18px;
+    border-radius: 4px;
+}
+ 
+#contact_form .input_item dl dt span.req {
+    background: #FF1515;
+}
+ 
+#contact_form .input_item dl dt span.any {
+    background: #cccccc;
+}
+ 
+#contact_form .input_item dl dd {
+    float: right;
+    width: 482px;
+    font-size: 18px;
+    line-height:30px;
+    height:auto;
+}
+ 
+#contact_form .input_item dl dd li {
+    display: inline-block;
+    margin: 0 15px 0 0;
+    line-height: 30px;
+    height: 30px;
+    padding: 3px 0;
+}
+ 
+#contact_form .input_item dl dd p.mail_caution {
+    font-size: 12px;
+    line-height: 19px;
+    color: #313131;
+    margin: 5px 0 0 0;
+}
+ 
+#contact_form .input_item dl dd input[type="text"],
+#contact_form .input_item dl dd input[type="number"],
+#contact_form .input_item dl dd input[type="email"],
+#contact_form .input_item dl dd input[type="tel"]{
+    width: 470px;
+    font-size: 18px;
+    height:30px;
+    padding: 3px 0 3px 10px;
+    margin:0;
+}
+ 
+#contact_form .input_item .transmission input[type="submit"] {
+    border: 3px double #ffafaf;
+    background: #ff0000;
+    font-size: 25px;
+    text-shadow: none;
+    color: #ffffff;
+    width: 400px;
+    padding: 30px 0;
+    margin: 25px 0;
+    display: block;
+    opacity: 1.0;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+ 
+#contact_form .input_item .transmission input[type="submit"]:hover {
+    background: #FF1515;
+    opacity:0.85;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -o-transition: 0.5s;
+    -ms-transition: 0.5s;
+    transition: 0.5s;
+}
+ 
+#contact_form .input_item dl dd input[type="text"].inp_error,
+#contact_form .input_item dl dd input[type="number"].inp_error,
+#contact_form .input_item dl dd input[type="tel"].inp_error,
+#contact_form .input_item dl dd textarea.inp_error {
+    border: 1px solid #F88A8A;
+    background: #F4D4D4;
+}
+ 
+#contact_form .input_item dl dd textarea {
+    width: 470px;
+    padding: 10px 3px 10px 10px;
+}
+ 
+#energy_contact #send_status{
+    padding: 5px 0 25px;
+    text-align: center;
+}
+ 
+#energy_contact #send_status p{
+    width: 480px;
+    margin: 0 auto;
+    padding: 0 15px;
+    line-height: 50px;
+    font-size: 25px;
+    border: 1px solid #3c763d;
+    border-radius: 4px;
+    background-color: #dff0d8;
+    color: #3c763d;
+}
+ 
+span.error_m {
+    font-size: 15px;
+    font-weight: normal;
+    color: #FF4040;
+    display: block;
+    margin: 0;
+}
+
+/* トップページ */
+
+.pagetop {
+	display: none;
+	position: fixed;
+	bottom: 30px;
+	right: 15px;
+	text-align: center;
+}
+
+.pagetop a {
+	display: block;
+	background-color: #ccc;
+	text-align: center;
+	color: #222;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 5px 10px;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	text-align: center;
+}
+
+.pagetop a:hover {
+	display: block;
+	background-color: #b2d1fb;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+	text-decoration: none;
+	padding: 5px 10px;
+	filter: alpha(opacity=50);
+	-moz-opacity: 0.5;
+	opacity: 0.5;
+	text-align: center;
+}
+
+
+/* レスポンシブデザイン */
+
+@media (max-width: 670px) {
+
+	.container {
+		font-size: 10px;
+		padding-left: 10px;
+		padding-top: 10px;
+	}
+
+	.header-left {
+		float: right;
+		font-size: 5px;
+		padding-right: 0px;
+	}
+
+	.lesson-wrapper {
+		padding: inherit;
+		padding-top: 20px;
+		padding-left: 5px;
+		font-size: 30px;
+		background-color: #f4f4f4;
+	}
+
+	.my-wrapper {
+		font-size: 20px;
+		padding-right: 10px;
+		padding-top: 10px;
+	}
+
+	.lesson-wrapper p {
+		font-size: 15px;
+		padding-top: 15px;
+	}
+
+	footer {
+		padding-left: 0px;
+	}
+}

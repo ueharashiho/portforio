@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>上原 志保</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src=“https://code.jquery.com/jquery-3.3.1.js” integrity=“sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=” crossorigin=“anonymous”></script>
+	<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
+</head>
+
+<body>
+
+	<div id="contact_form">
+		<h2 style="font-weight:bold; margin:20px 0; font-size:20px;">お問い合わせフォーム</h2>
+		<form method="post" name="demo_form">
+			<div class="input_item">
+				<dl class="clearfix">
+					<dt><span class="req">必須</span>名前</dt>
+					<dd>
+						<input type="text" id="name" name="name">
+						<span id="name_error" class="error_m"></span>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><span class="req">必須</span>フリガナ</dt>
+					<dd>
+						<input type="text" id="furigana" name="furigana">
+						<span id="furigana_error" class="error_m"></span>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><span class="any">任意</span>ユーザー名</dt>
+					<dd>
+						<input type="text" id="username" name="username">
+						<span id="username_error" class="error_m"></span>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><span class="req">必須</span>メールアドレス(半角英数字)</dt>
+					<dd>
+						<input type="text" id="mailaddress" name="mail_address">
+						<span id="mailaddress_error" class="error_m"></span>
+						<p class="mail_caution"></p>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><span class="req">必須</span>電話番号(半角数字)</dt>
+					<dd>
+						<input type="tel" id="tel" name="tel">
+						<span id="tel_error" class="error_m"></span>
+					</dd>
+				</dl>
+
+				<dl class="clearfix">
+					<dt><span class="req">必須</span>お問い合わせ(500文字以内)</dt>
+					<dd>
+						<textarea name="remarks" id="remarks" rows="4" cols="50" maxlength="500" style="overflow: hidden; word-wrap: break-word; resize: horizontal; height: 170px;"></textarea>
+						<span id="remarks_error" class="error_m"></span>
+					</dd>
+				</dl>
+
+				<div class="transmission">
+					<input class="btn_submit" id="btn_submit" type="submit" value="内容を送信する" onclick="input_check();return false;">
+				</div>
+				<div id="send_status"></div>
+
+			</div>
+		</form>
+	</div>
+
+	<script type="text/javascript">
+		// 入力内容チェックのための関数
+		function input_check() {
+			var result = true;
+
+			// エラー用装飾のためのクラスリセット
+			$('#name').removeClass("inp_error");
+			$('#furigana').removeClass("inp_error");
+			$('#username').removeClass("inp_error");
+			$('#mailaddress').removeClass("inp_error");
+			$('#tel').removeClass("inp_error");
+			$('#remarks').removeClass("inp_error");
+
+			// 入力エラー文をリセット
+			$("#name_error").empty();
+			$("#furigana_error").empty();
+			$("#username_error").empty();
+			$("#mailaddress_error").empty();
+			$("#tel_error").empty();
+			$("#remarks_error").empty();
+
+			// 入力内容セット
+			var name = $("#name").val();
+			var furigana = $("#furigana").val();
+			var username = $("#username").val();
+			var mailaddress = $("#mailaddress").val();
+			var tel = $("#tel").val().replace(/[━.*‐.*―.*－.*\–.*ー.*\-]/gi, '');
+			var remarks = $("#remarks").val();
+
+			// 入力内容チェック
+
+			// お名前
+			if (name == "") {
+				$("#name_error").html("<i class='fa fa-exclamation-circle'></i> お名前は必須です。");
+				$("#name").addClass("inp_error");
+				result = false;
+			} else if (name.length > 25) {
+				$("#name_error").html("<i class='fa fa-exclamation-circle'></i> お名前は25文字以内で入力してください。");
+				$("#name").addClass("inp_error");
+				result = false;
+			}
+			// フリガナ
+			if (furigana == "") {
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは必須です。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			} else if (!furigana.match(/^[ァ-ロワヲンー 　\r\n\t]*$/)) {
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは全角カタカナで入力してください。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			} else if (furigana.length > 25) {
+				$("#furigana_error").html("<i class='fa fa-exclamation-circle'></i> フリガナは25文字以内入力してください。");
+				$("#furigana").addClass("inp_error");
+				result = false;
+			}
+			// ユーザー名
+			if (username.length > 25) {
+				$("#username_error").html("<i class='fa fa-exclamation-circle'></i> ユーザー名は25文字以内入力してください。");
+				$("#username").addClass("inp_error");
+				result = false;
+			}
+			// メールアドレス
+			if (mailaddress == "") {
+				$("#mailaddress_error").html("<i class='fa fa-exclamation-circle'></i> メールアドレスは必須です。");
+				$("#mailaddress").addClass("inp_error");
+				result = false;
+			} else if (!mailaddress.match(/^([a-zA-Z0-9])+([a-zA-Z0-9\._-])*@([a-zA-Z0-9_-])+([a-zA-Z0-9\._-]+)+$/)) {
+				$('#mailaddress_error').html("<i class='fa fa-exclamation-circle'></i> 正しいメールアドレスを入力してください。");
+				$("#mailaddress").addClass("inp_error");
+				result = false;
+			} else if (mailaddress.length > 255) {
+				$('#mailaddress_error').html("<i class='fa fa-exclamation-circle'></i> 正しいメールアドレスを入力してください。");
+				$("#mailaddress").addClass("inp_error");
+				result = false;
+			}
+			// 電話番号
+			if (tel == "") {
+				$("#tel_error").html("<i class='fa fa-exclamation-circle'></i> 電話番号は必須です。");
+				$("#tel").addClass("inp_error");
+				result = false;
+			} else if ((!tel.match(/^[0-9]+$/)) || (tel.length < 10)) {
+				$('#tel_error').html("<i class='fa fa-exclamation-circle'></i> 正しい電話番号を入力してください。");
+				$("#tel").addClass("inp_error");
+				result = false;
+			}
+			// お問い合わせ内容
+			if (remarks == "") {
+				$("#remarks_error").html("<i class='fa fa-exclamation-circle'></i> お問い合わせ内容は必須です。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			} else if (remarks.match(/[<(.*)>.*<\/\1>]/)) {
+				$('#remarks_error').html("<i class='fa fa-exclamation-circle'></i> HTML、URLの貼りつけは禁止しています。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			} else if (remarks.match(/^[ 　\r\n\t]*$/)) {
+				$('#remarks_error').html("<i class='fa fa-exclamation-circle'></i> お問い合わせ内容は必須です。");
+				$("#remarks").addClass("inp_error");
+				result = false;
+			}
+
+			return result;
+		}
+
+	</script>
+
+</body>
+
+</html>

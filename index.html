@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<title>上原 志保</title>
+	<link rel="stylesheet" href="stylesheet.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome-animation/0.0.10/font-awesome-animation.css" type="text/css" media="all" />
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+	<script src=“https://code.jquery.com/jquery-3.3.1.js” integrity=“sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=” crossorigin=“anonymous”></script>
+</head>
+
+<body>
+
+	<head>
+		<div class="container">
+			<i>Choose Your Life</i>
+			<div class="header-left">
+				<span>Portfolio</span>
+				<p class="pagetop"><a href="#wrap">▲</a></p>
+				<span>(C)2018 ShihoUehara</span>
+			</div>
+		</div>
+	</head>
+
+	<script>
+		$(document).ready(function() {
+			var pagetop = $('.pagetop');
+			$(window).scroll(function() {
+				if ($(this).scrollTop() > 100) {
+					pagetop.fadeIn();
+				} else {
+					pagetop.fadeOut();
+				}
+			});
+
+			pagetop.click(function() {
+				$('body, html').animate({
+					scrollTop: 0
+				}, 500);
+				return false;
+			});
+		});
+	</script>
+
+	<main>
+		<div class="top-wrapper">
+			<h1>SHIHO UEHARA</h1>
+			<h3>2018.08.01 Yankee.hacker 7th</h3>
+		</div>
+		<div class="lesson-wrapper">
+			<i>Story</i>
+			<div class="my-wrapper">
+				<a href="oki.html">Okinawa</a>
+				<a href="like.html">Like</a>
+				<a href="form.html">Form</a>
+			</div>
+			<p>1998年04月27日沖縄県那覇市で誕生する。七人兄弟の末っ子として甘やかされ育つ。</p>
+			<p>中学に上がると遊びに夢中になり学業が疎かになり、</p>
+			<P>今が楽しければいいという若く、甘い考えで高校に進学せず、アルバイト人生を送る。</P>
+			<p>18歳に通信高校に通い始めるも、続かず。20歳になり、友人が皆就職などして自分の将来を真剣に考える。</p>
+			<p>中卒で正社員として雇ってくれる企業などあるのかと疑問をもちながらも、</p>
+			<p>東京で働きたいなと淡い期待を抱きながらGoogleで検索をする。</p>
+			<P>するとヤンキーインターンという名前に出会い、ネーミングセンスがすごいなと気になり、</P>
+			<p>さらに調べると、これは行くしかないという気持ちになり飛び立つ。</p>
+			<p>現在は、東京で働くことを夢に見て日々励んでいる。</p>
+		</div>
+	</main>
+	<footer>
+		<div class="massage-wrapper">
+			<h3>上原志保(満二十歳)</h3>
+			<p>出身地:沖縄県那覇市</p>
+			<p>誕生日:平成十年四月二十七日</p>
+		</div>
+		<div class="footer-list">
+			<ul>
+				<i class="fab fa-twitter twitter-logo faa-pulse animated"></i>
+				<a href="https://twitter.com/98427s?s=09">Twitter</a>
+				<i class="fab fa-facebook-f facebook-logo faa-pulse animated"></i>
+				<a href="https://www.facebook.com/profile.php?id=100026572185577">Facebook</a>
+			</ul>
+
+		</div>
+
+	</footer>
+</body>
+
+</html>
